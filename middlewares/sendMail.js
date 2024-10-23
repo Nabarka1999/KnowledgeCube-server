@@ -101,7 +101,7 @@ export const sendForgotMail = async (subject, data) => {
       max-width: 600px;
     }
     h1 {
-      color: #5a2d82;
+      color: red;
     }
     p {
       color: #666666;
@@ -110,7 +110,7 @@ export const sendForgotMail = async (subject, data) => {
       display: inline-block;
       padding: 15px 25px;
       margin: 20px 0;
-      background-color: #5a2d82;
+      background-color: red;
       color: white;
       text-decoration: none;
       border-radius: 4px;
@@ -122,22 +122,21 @@ export const sendForgotMail = async (subject, data) => {
       text-align: center;
     }
     .footer a {
-      color: #5a2d82;
+      color: red;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Reset Your Password</h1>
-    <p>Hello,</p>
-    <p>You have requested to reset your password. Please click the button below to reset your password.</p>
-    <a href="${process.env.frontendurl}/reset-password/${data.token}" class="button">Reset Password</a>
-    <p>If you did not request this, please ignore this email.</p>
-    <div class="footer">
-      <p>Thank you,<br>Your Knowledgecube Team</p>
-      <p><a href="https://yourwebsite.com">yourwebsite.com</a></p>
-    </div>
+      <h1>Reset Your Password</h1>
+      <p>Dear User,</p>
+      <p>We received a request to reset your password. To proceed, please click the button below:</p>
+      <a href="${process.env.frontendurl}/reset-password/${data.token}" class="button">Reset Password</a>
+      <p>If you did not request this password reset, please disregard this email. Your account will remain secure.</p>
+      <div class="footer">
+          <p>Best regards,<br>The KnowledgeCube Team</p>
+      </div>
   </div>
 </body>
 </html>
