@@ -48,11 +48,13 @@ const sendMail = async (email, subject, data) => {
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>OTP Verification</h1>
-        <p>Hello ${data.name} your (One-Time Password) for your account verification is.</p>
-        <p class="otp">${data.otp}</p> 
-    </div>
+  <div class="container">
+      <h1>OTP Verification</h1>
+      <p>Dear ${data.name},</p>
+      <p>Your One-Time Password (OTP) for account verification is:</p>
+      <p class="otp">${data.otp}</p>
+      <p>Please enter this code to complete the verification process.</p>
+  </div>
 </body>
 </html>
 `;
